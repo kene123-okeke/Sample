@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    background: linear-gradient(135deg, rgb(19, 1, 53), rgba(17, 16, 16, 0.514));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1%;
+}
+
+.main_block{
+    background: #fff;
+    margin: 5%;
+    padding-left:2%;
+    padding-right:2%;
+    min-width: 5%;
+    border-radius: 15px;
+    justify-content: center;
+}
+.head{
+    display: block;
+    padding-top: 15%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 200%;
+    color: rgb(93, 50, 141)
+
+}
+
+.fill-in{
+    display: inherit;
+}
+.name{
+    display: inline;
+    float: left;
+    margin: 5%;
+    padding-top: 2%;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.input{
+    display: block;
+    min-width:90% ;
+    margin: 5%;
+    padding: 2%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-decoration: pink;
+    transition: ease-in-out 0.8s;
+   
+}
+
+.input:hover{
+    transform: scale(1.05);
+}
+
+button{
+    border: 1px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgb(19, 1, 53), rgba(17, 16, 16, 0.514));
+    transition: ease-in-out 0.8s;
+    color: #ffd;
+    margin-left: 4%;
+    margin-top: 6%;
+    margin-bottom: 20%;
+    padding: 4%;
+    display: block;
+    float: left;
+    justify-content: center;
+    min-width: 90%;
+    
+}
+button:hover{
+   background: linear-gradient(135deg, rgba(17, 16, 16, 0.514), rgba(19, 1, 53));
+   color: rgb(248, 245, 245);
+   transition: ease-in-out 0.5s;
+   transform: scale(1.05);
+}
+
