@@ -78,16 +78,16 @@
     border-left: none;
     border-right: none;
     text-decoration: #E2E8F0;
-    transition: ease-in-out 0.8s;
+    transition: ease-in-out 0.05s;
 }
 
 .input input:hover{
-     transform: scale(1.04);
+     transform: scale(1.05);
 }
 .input input:focus{
     outline: none;
     border-bottom: 2px solid #E2E8F0;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.05s;
 }
 
 button{
@@ -105,13 +105,13 @@ button{
     align-self: center;
     justify-self: center;
     min-width: 100%;
-    
+    transition: ease-in-out 0.2s;    
 }
 button:hover{
    
    background-color: #E2E8F0;
    color: #0B132B;
-   transform: scale(1.04);
+   transform: scale(1.09);
 }
 
 .text{
@@ -120,9 +120,9 @@ button:hover{
     justify-content: center;
     margin: 9px;
     padding-top: 30%;
-    padding-bottom: 18%;
+    padding-bottom: 35%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(44, 44, 44);
+    color: #E2E8F0;;
     font-size: small;
     text-align: center;
 
@@ -136,10 +136,66 @@ button:hover{
     color: rgb(99, 99, 212);
 }
 .text p a:hover{
-    color: purple;
+    color: #06B6D4;
     transition: ease-in-out 0.5s;;
 }
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 24px 0;
+    color: #64748B;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.divider:not(:empty)::before { margin-right: .5em; }
+.divider:not(:empty)::after { margin-left: .5em; }
+
+/* Social Buttons Flex Grid Container */
+.social-login-group {
+    display: flex;
+    gap: 12px;
+}
+
+/* Individual Base Social Button Formatting */
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Subtle tech-style hovering illumination rules */
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.google-btn:hover {
+    box-shadow: 0 0 15px rgba(234, 67, 53, 0.1);
+}
+
+.github-btn:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
 /* .footer{
     margin-top:90vh;
     margin-left: -20vw;
