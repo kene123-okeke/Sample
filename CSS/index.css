@@ -78,6 +78,7 @@
     border-left: none;
     border-right: none;
     text-decoration: #E2E8F0;
+    color:#E2E8F0;
     transition: ease-in-out 0.05s;
 }
 
@@ -120,9 +121,9 @@ button:hover{
     justify-content: center;
     margin: 9px;
     padding-top: 30%;
-    padding-bottom: 35%;
+    padding-bottom: 10%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #E2E8F0;;
+    color: #64748B;
     font-size: small;
     text-align: center;
 
@@ -137,7 +138,7 @@ button:hover{
 }
 .text p a:hover{
     color: #06B6D4;
-    transition: ease-in-out 0.5s;;
+    transition: ease-in-out 0.05s;;
 }
 .divider {
     display: flex;
@@ -161,24 +162,29 @@ button:hover{
 
 /* Social Buttons Flex Grid Container */
 .social-login-group {
+    /* background-color: antiquewhite; */
     display: flex;
-    gap: 12px;
 }
 
+.box{
+    display: flex;
+    width: 20%;
+    margin-left: -1%;
+    margin-right: auto;
+}
 /* Individual Base Social Button Formatting */
 .social-btn {
-    flex: 1;
     display: flex;
+    width: 2vw;
+    height: 5vh;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 2px;
+    float: left;
+    padding: 0px;
+    background: transparent;
+    border:none;
     border-radius: 8px;
-    color: #ffffff;
-    font-size: 0.9rem;
-    font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -189,11 +195,19 @@ button:hover{
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.google-btn:hover {
+#google-btn:hover {
     box-shadow: 0 0 15px rgba(234, 67, 53, 0.1);
 }
 
-.github-btn:hover {
+#github-btn:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+#facebook-btn:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+#apple-btn:hover {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 /* .footer{
