@@ -6,19 +6,22 @@
 .bgp{
     background-color:#000338;
     display: flex;
+    flex-direction: row;
     min-height: 100vh;
     padding: 0%;
     transition: ease-in-out 0.5s;
 }
 
 .side-pane{
+    position: relative;
     margin: 0px;
-    background-image: url("../Images/—Pngtree—blue\ technology\ background\ with\ a_16440450\(1\).png");
+    flex: 0.75;
+    background-image: url("../Images/side-pane.png");
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
     background-attachment: local;
-    width: 60%;
+    width: 50%;
     min-height: 100%;
     display: block;
     align-content: center;
@@ -26,9 +29,17 @@
     padding: 5%;
 }
 
+.side-pane::after{
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, transparent 60%, #000338 100%);
+}
 
 .main_block{
-    background-color: #0B132B;
+    display: flex;
+    flex: auto;
+    background: #0B132B;
     margin:auto;
     padding:0%;
     max-width: fit-content;
@@ -62,12 +73,13 @@
     margin-right: 5.2vw;
     min-width: 15vw;
     max-width: 100%;
+    text-align: left;
 
 }
 .input input{
     background-color: transparent;
     display: block;
-    min-width: 30%;
+    min-width: 100%;
     max-width: 100%;
     margin-left: 1.1vw;
     margin-bottom: 15%;
@@ -79,18 +91,56 @@
     border-right: none;
     text-decoration: #E2E8F0;
     color:#E2E8F0;
+    text-align: left;
     transition: ease-in-out 0.05s;
 }
 
+#input{
+    letter-spacing: 0.15em;
+}
 .input input:hover{
      transform: scale(1.05);
+     display: "Email to er";
 }
 .input input:focus{
     outline: none;
     border-bottom: 2px solid #E2E8F0;
     transition: ease-in-out 0.05s;
 }
+.password{
+    position: relative;
+    width: 100%;
+}
 
+.password input{
+    padding-right: 0%;
+}
+
+.toggle-password-btn {
+    position: absolute;
+    z-index: 1;
+    left: 45%;
+    top: 0%;
+    width: 1%;
+    background: #fff;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: #64748B; /* Match your subtitle/muted gray color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+.toggle-password-btn svg{
+    width: 10%;
+    height: 10%;
+    display: block;
+}
+.toggle-password-btn:hover {
+    background: none;
+    color: #00F2FE; /* Your electric cyan highlight */
+}
 button{
     border: 1px;
     border-radius: 5px;
@@ -115,12 +165,74 @@ button:hover{
    transform: scale(1.09);
 }
 
+.remember-me-group{
+    /* background-color: #E2E8F0; */
+    display: inline-flex;
+    align-items:end;
+    justify-content: center;
+    min-width: 5%;
+    margin-left: 5vw;
+    column-gap: 2vw;
+    
+}
+#remeber-me-checkbox{
+    justify-self:end;
+    color: #000338;
+    flex-shrink: 0;
+}
+
+.remeber-me {
+    display: inline-flex;
+    margin: auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #64748B;
+    font-size: small;
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+    
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    width: 10.5px;
+    height: 15px; 
+   
+    flex-shrink: 0; 
+    background-color: #000338;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    vertical-align: middle;
+    margin-right: 8%;
+}
+
+input[type="checkbox"]:checked{
+    background-color: #06B6D4;
+    border-color: #000338;
+    width: 7.5px;
+    height: 15px;
+
+}
+
+input[type="checkbox"]:checked::before{
+    content: "✓";
+    color: #0B132B;
+    font-size: 11px;
+    font-weight: bold;
+    
+
+}
 .text{
     display: block;
     float: auto;
     justify-content: center;
-    margin: 9px;
-    padding-top: 30%;
+    margin: 0vw;
+    padding-top: 5%;
     padding-bottom: 10%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #64748B;
@@ -130,6 +242,8 @@ button:hover{
 }
 .text p{
     padding: 2%;
+    margin-left: 1.5vw;
+    white-space: nowrap;
 }
 
 .text p a{
@@ -144,7 +258,8 @@ button:hover{
     display: flex;
     align-items: center;
     text-align: center;
-    margin: 24px 0;
+    margin: 5% 0;
+    padding-left: 13%;
     color: #64748B;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -154,11 +269,11 @@ button:hover{
 .divider::before, .divider::after {
     content: '';
     flex: 1;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.divider:not(:empty)::before { margin-right: .5em; }
-.divider:not(:empty)::after { margin-left: .5em; }
+.divider:not(:empty)::before { margin-right: 4%; }
+.divider:not(:empty)::after { margin-left: 4%; }
 
 /* Social Buttons Flex Grid Container */
 .social-login-group {
@@ -169,7 +284,7 @@ button:hover{
 .box{
     display: flex;
     width: 20%;
-    margin-left: -1%;
+    margin-left: 5%;
     margin-right: auto;
 }
 /* Individual Base Social Button Formatting */
@@ -183,8 +298,8 @@ button:hover{
     float: left;
     padding: 0px;
     background: transparent;
-    border:none;
-    border-radius: 8px;
+    border:1px;
+    border-radius: 50%;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -196,7 +311,7 @@ button:hover{
 }
 
 #google-btn:hover {
-    box-shadow: 0 0 15px rgba(234, 67, 53, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 #github-btn:hover {
@@ -210,6 +325,38 @@ button:hover{
 #apple-btn:hover {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
+
+
+@media(max-width:550px){
+    .bgp{
+        flex-direction: column;
+    }
+
+    .main_block{
+        order: 1;
+        width: 100%;
+        padding: 40px 20px;
+        margin-bottom: 40px;
+    }
+
+    .side-pane{
+        order: 2;
+        width: 100%;
+        height: 250px;
+        min-height: 250px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .side-pane::after{
+          content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, transparent 70%, #000338 100%);
+}
+
+    }
+
 /* .footer{
     margin-top:90vh;
     margin-left: -20vw;
