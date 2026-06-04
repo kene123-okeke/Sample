@@ -64,6 +64,7 @@
 }
 
 .input{
+    position:relative;
     display: block;
     float: left;
     align-items: center;
