@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta name="viewport", charset="utf-8", content="width=device-width, initial-scale=1.0">
         <title>Sign Up</title>
-        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet", href="../CSS/signup.css">
-        <link rel="webpage icon", href="../Images/sign.png">
+        <link rel="webpage icon", href="../Images/First Work.svg">
+        <link rel="stylesheet", href="../fontawesome-free-7.2.0-web/css/all.min.css">
     </head>
     <body class="bgp">
-        <div class="side-pane"></div>
+        
        <div class="main_block">
         <form class="fill-in" action="dashboard.html">
              <h2 class="head">Sign Up</h2>
-            <p  class ="name">Lastname</p>
-            <input class="input" type="text", name="lastname", placeholder="Lastname">
-            <p  class ="name">Firstname</p>
-            <input class="input"type="text", name=" Firstname", placeholder="Firstname">
-            <p class="name">Enter Your Email</p>
-            <input class="input"type="text", name="username", placeholder="Username">
-            <p  class="name">Enter your password</p>
-            <input class="input"type="password", name="Password", placeholder="Password">
-            <p  class="name">Confirm your password</p>
-            <input class="input"type="password" name="password", placeholder="Confirm">
+            <div class="input-wrapper">
+            <label  class ="name">Lastname
+            <input class="input" type="text", name="lastname", required="Lastname">
+            </label>
+            <label  class ="name">Firstname
+            <input class="input"type="text", name=" Firstname", required="Firstname">
+            </label>
+            <label class="name">Enter Your Email
+            <input class="input"type="text", name="username", required="Username">
+            </label>
+            <label class="name">Enter your password
+            <input class="input"type="password", name="Password",required="Password">
+            </label>
+            <label  class="name">Confirm your password
+            <input class="input"type="password" name="password", required="Confirm">
+            </label>
+            </div>
+            
             <button type="submit" class="button">Submit</button>
-        
+
         </form>
+
        </div>
+       <div class="side-pane"></div>
     </body>
 </html>

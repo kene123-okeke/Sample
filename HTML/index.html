@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport", charset="utf-8", content="width=device-width, initial-scale=1.0">
         <title>K.C. Arts</title>        
         <link rel="stylesheet" href="..\CSS\index.css">
         <link rel="webpage icon" type="png" href="..\Images/First Work.svg">
@@ -15,16 +15,20 @@
             <div class="head">
                 <h1>Login</h1>
             </div>
-            <div class="input">
+            <div class="input-wrapper">
                 <form action="dashboard.html">
-                <input type="email" name="email", value="", placeholder="Email">
+                <div class="email">
+                <input type="email" name="email", value="", required placeholder="Email">
+                <i class="fa fa-envelope-open"></i>
+                </div>
+
                 <div class="password">
                 <input id = "password", type="password" name="", value="", required placeholder="Password">
                 <button type="button" id="toggle-password-btn" class="toggle-password-btn" aria-label="Toggle-password visibilty">
-                    <i class="fa fa-eye" width="15" height="15"></i>
+                    <i class="fa fa-eye"></i>
                 </button>
             </div>
-                <button type="submit"><p>Login</p></button>
+                <button class="login-btn" type="submit"><p>Login</p></button>
 
                 <div class="remember-me-group">
                     <div id="remeber-me-checkbox"><label><input type="checkbox" name="", value="", placeholder="none">
