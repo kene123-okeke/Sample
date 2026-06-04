@@ -5,6 +5,7 @@
         <title>K.C. Arts</title>        
         <link rel="stylesheet" href="..\CSS\index.css">
         <link rel="webpage icon" type="png" href="..\Images/First Work.svg">
+        <link rel="stylesheet" href="..\fontawesome-free-7.2.0-web\css\all.min.css">
     </head>
     <body class = "bgp">
         <div class="side-pane">
@@ -20,16 +21,14 @@
                 <div class="password">
                 <input id = "password", type="password" name="", value="", required placeholder="Password">
                 <button type="button" id="toggle-password-btn" class="toggle-password-btn" aria-label="Toggle-password visibilty">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
-                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                        <circle cx="12" cy="12" r="3"></circle>
+                    <i class="fa fa-eye" width="15" height="15"></i>
                     </svg>
                 </button>
             </div>
                 <button type="submit"><p>Login</p></button>
 
                 <div class="remember-me-group">
-                    <div id="remeber-me-checkbox"><input type="checkbox" name="", value="", placeholder="none">
+                    <div id="remeber-me-checkbox"><label><input type="checkbox" name="", value="", placeholder="none">
                     </div> 
                     <div class="remeber-me"><p> Remember Me</p>
                     </div>
@@ -68,6 +67,7 @@
     </div>
             </div></aside>
         </div>
+        
         <!--<div class="footer">
             <footer>
            &copy; K.C Arts 

@@ -146,7 +146,7 @@ button{
     margin-left: 1.1vw;
     margin-right: 0vw;
     margin-top: 5%;
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
     padding: 5%;
     display: block;
     float: left;
@@ -169,13 +169,14 @@ button:hover{
     justify-content: center;
     min-width: 5%;
     margin-left: 5vw;
-    column-gap: 2vw;
+    column-gap: 1.15vw;
     
 }
 #remeber-me-checkbox{
     justify-self:end;
     color: #000338;
     flex-shrink: 0;
+    accent-color: #000338;
 }
 
 .remeber-me {
@@ -191,12 +192,10 @@ button:hover{
 }
 
 input[type="checkbox"]{
-    appearance: none;
-    width: 10.5px;
-    height: 15px; 
-   
+    width: 6px;
+    height: 12px;    
     flex-shrink: 0; 
-    background-color: #000338;
+    accent-color: #000338;
     border: 1px solid rgba(255, 255, 255, 0.03);
     border-radius: 4px;
     cursor: pointer;
@@ -205,19 +204,19 @@ input[type="checkbox"]{
     justify-content: center;
     transition: all 0.2s ease;
     vertical-align: middle;
-    margin-right: 8%;
+    margin-right: 10%;
 }
 
 input[type="checkbox"]:checked{
     background-color: #06B6D4;
     border-color: #000338;
-    width: 7.5px;
-    height: 15px;
+    width: 6px;
+    height: 12px;
 
 }
 
 input[type="checkbox"]:checked::before{
-    content: "✓";
+    content: "";
     color: #0B132B;
     font-size: 11px;
     font-weight: bold;
