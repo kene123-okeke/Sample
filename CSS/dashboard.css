@@ -5,40 +5,61 @@
 }
 
 .background-layer{
-    z-index: -1;
+    position: relative;
     background-image: url("../Images/dashboard-light.jpg");
     background-repeat: no-repeat;
     background-size:cover;
-    background-attachment: fixed;
+    background-attachment:local;
     min-height: 100vh;
-    min-width: 100%
+    min-width: 100%;
 }
 
-.nav-bar{
-    z-index: inherit;
+.background-layer::after{
+    content:"";
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    height: 100%;
     width: 100%;
-    height: 5vh;
+    background: linear-gradient(to bottom, transparent 30%, #558297 100%);
+}
+.nav-bar{
+    width: 100%;
+    height: 7vh;
     margin: auto;
-    padding-top: 2.5vh;
+    padding-top: 2vh;
 }
 
 .menu{
     width: 100%;
-    height: 5vh;
+    height: 7vh;
     float: left;
-
+    
 }
 
 .menu .list-1{
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: left;
-    height: 7vh;
+    justify-content: center;
+    height: 10vh;
+    width: 85%;
     gap: 3vw;
-    border: 1px solid black;
+    border:none;
     padding: 10px 5px;
+    background: transparent;
+    z-index: 1;
 }
-
+.menu .list-1::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #a3dcf7;
+    filter: blur(10px);
+    z-index: -1;
+}
  .menu .list-1 .nav-list{
     background: transparent 20%;
     max-width: max-content;
@@ -46,12 +67,13 @@
     text-wrap:nowrap;
     text-align: center;
     padding-left: 1vw;
+    
 } 
 
 .menu .list-1 .nav-list .nav{
     justify-content: center;
     border: 1px solid black;
-    padding: 15px 3vw;
+    padding: 13.5px 20px;
     border-radius: 50px;
     text-decoration: none;
     color: #0f172a;
@@ -62,16 +84,110 @@
 } 
 
  .user-profile-container{
+    position: relative;
     display: flex;
+    background:transparent;
+    border:none;
+    justify-content: center;
+    height: 10vh;
+    width: 15.5%;
     align-items: center;
     float: right;
-    margin-right: 1vw;
-    margin-top: -2.5vh;
-    gap: 1vw;
+    margin-right: 0vw;
+    margin-top: -7vh;
+    gap: 3vw;
+    z-index: 1;
+}
+.user-profile-container::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #a3dcf7;
+    filter: blur(10px);
+    z-index: -1;
+}
+.write-up{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    display: block;
+    padding-top: 15%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: bold;
+    text-align: left;
+    color: #0f172a;
 }
 
-.write-up h2{
-    z-index: 2;
-    display: flexbox;
-    margin-top: 1vh;
+.dashboard-footer {
+    background: #a3dcf7; /* Deep slate black base */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 60px 40px 20px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-info{
+    width: 20%;
+    
+}
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+}
+
+.footer-col a {
+    display: block;
+    color: #64748b; /* Muted cool gray text links */
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+/* Slick hover state matching your accent styling */
+.footer-col a:hover {
+    color: #0f172a; /* Electric cyan reveal */
+}
+
+/* Bottom bar with system indicator ticker */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #475569;
+}
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #10b981; /* Emerald green for healthy status monitoring */
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #10b981; /* Soft glow effect */
 }
