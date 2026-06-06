@@ -1,83 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="viewport", charset="utf-8", content="width=device-width, initial-scale=1.0">
-        <title>K.C. Arts</title>        
+        <title>Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0", charset="utf-8">
         <link rel="stylesheet" href="..\CSS\index.css">
-        <link rel="webpage icon" type="png" href="..\Images/First Work.svg">
-        <link rel="stylesheet" href="..\fontawesome-free-7.2.0-web\css\all.min.css">
+        <link rel="webpage icon" href="..\Images\icon.png">
+        <link rel="stylesheet" href="../fontawesome-free-7.2.0-web/css/all.min.css">
+
+        <style>
+
+        </style>
     </head>
-    <body class = "bgp">
-        <div class="side-pane">
-       
-        </div>
-        <div class="main_block"><aside>
-            <div class="head">
-                <h1>Login</h1>
+    <body>
+        <div class="background-layer">
+            <div class="nav-bar">
+                
+                <div class="user-profile-container">
+                    <ul class="logo-list">
+                        <li>
+                            <div class="logo">
+                                <img src="../Images/icon.png" alt="K.c Arts logo" height="50px" width="50px">
+                            </div>
+                        </li>  
+                    </ul>                  
+                    <div class="links">
+                        <ul>
+                            <li class="login"><a href="login.html">Login</a></li>
+                            <li class="sign-up"><a href="signup.html">Sign-up</a></li>
+                        </ul>
+                    </div>
+                
+                </div>
             </div>
-            <div class="input-wrapper">
-                <form action="dashboard.html">
-                <div class="email">
-                <input type="email" name="email", value="", required placeholder="Email">
-                <i class="fa fa-envelope-open"></i>
+            <div class="write-up">
+                <h2>Welcome Back </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magnam temporibus voluptatum dolores? Rem unde quod consectetur impedit porro laboriosam! Repellendus exercitationem sint doloremque accusamus est rem facilis, natus dolor.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt magnam temporibus voluptatum dolores? Rem unde quod consectetur impedit porro laboriosam! Repellendus exercitationem sint doloremque accusamus est rem facilis, natus dolor.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer">
+            <footer class="dashboard-footer">
+                <div class="footer-columns">
+                    <div class="footer-info">
+                        <span class="footer-logo"><img src="../Images/First Work.svg" alt="Logo" width="160vw" height="150vw"></span>
+                        <p class="footer-tagline">Premium digital tech assets and design systems.</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>My Account</h3>
+                        <a href="#">Track Order</a>
+                        <a href="#">Order History</a>
+                        <a href="#">Security Settings</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Support</h3>
+                        <a href="#">Help Center</a>
+                        <a href="#">Refund Policy</a>
+                        <a href="#">Contact Us</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Ecosystem</h3>
+                        <a href="#">Community Discord</a>
+                        <a href="#">API Docs</a>
+                        <a href="#">Referral Program</a>
+                    </div>
                 </div>
 
-                <div class="password">
-                <input id = "password", type="password" name="", value="", required placeholder="Password">
-                <button type="button" id="toggle-password-btn" class="toggle-password-btn" aria-label="Toggle-password visibilty">
-                    <i class="fa fa-eye-slash"></i>
-                </button>
-            </div>
-                <button class="login-btn" type="submit"><p>Login</p></button>
-
-                <div class="remember-me-group">
-                    <div id="remeber-me-checkbox"><label><input type="checkbox" name="", value="", placeholder="none">
-                    </div> 
-                    <div class="remeber-me"><p> Remember Me</p>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 K.C. Arts. All rights reserved.</p>
+                    <div class="system-status">
+                        <span class="status-dot"></span> All Systems Operational
                     </div>
-            </form>
-        </div>
-            <div class="text">
-                <p>Forgot <a href="password.html"><strong> Password</strong></a>?</p>
-                <p> Don't have an account? <a href="signup.html"><strong>Sign Up</strong></a></p>
-                <div class="divider">
-    <span>or sign-in with</span>
-</div>
-
-<div class="social-login-group">
-    <div class="box">
-        <button type="button" class="social-btn" id = "google-btn">
-            <img src="../Images/google-icon.svg" viewBox="0 0 24 24" width="30" height="30" alt="Google Sign-In">
-                <path fill="#EA4335" d="M12.24 10.285V14.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l3.227-3.227C18.416 1.414 15.55 0 12.24 0 5.58 0 0 5.58 0 12.24s5.58 12.24 12.24 12.24c6.96 0 11.57-4.894 11.57-11.79 0-.795-.085-1.404-.19-1.905H12.24z"/>
-        </button>
-
-        <button type="button" class="social-btn" id="github-btn">
-            <img src="../Images/github-icon.svg" viewBox="0 0 24 24" width="30" height="30" fill="none" alt="Github Sign-In">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577v-2.234c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.82 1.102.82 2.222v3.293c0 .319.22.694.825.576C20.565 21.795 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
-
-        </button>
-        
-        <button type="button" class="social-btn" id ="facebook-btn">
-            <img src="../Images/facebook-icon.svg" alt="Facebook Sign-In" viewBox="0 0 24 24" fill="none" height="30" width="30">
-                <path fill="#EA4335" d="M12.24 10.285V14.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l3.227-3.227C18.416 1.414 15.55 0 12.24 0 5.58 0 0 5.58 0 12.24s5.58 12.24 12.24 12.24c6.96 0 11.57-4.894 11.57-11.79 0-.795-.085-1.404-.19-1.905H12.24z"/>
-    
-        </button>
-        <button type="button" class="social-btn" id="apple-btn">
-            <img src="../Images/apple-icon.svg" viewBox="0 0 24 24" width="30" height="30" alt="Google Sign-In">
-                <path fill="#EA4335" d="M12.24 10.285V14.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l3.227-3.227C18.416 1.414 15.55 0 12.24 0 5.58 0 0 5.58 0 12.24s5.58 12.24 12.24 12.24c6.96 0 11.57-4.894 11.57-11.79 0-.795-.085-1.404-.19-1.905H12.24z"/>
-     
-        </button>
-    </div>
-            </div></aside>
-        </div>
-        
-        <!--<div class="footer">
-            <footer>
-           &copy; K.C Arts 
+                </div>
             </footer>
-        </div>-->
-        <script>
-            console.log('hello people');
-        </script>
+        </div>
     </body>
 </html>
